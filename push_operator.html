@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>js_das4-3</title>
+<style>
+body{
+	margin:0;
+	background:#07d8bb;
+	color:#04047b;
+}
+#d1{
+	height:500px;
+	width:600px;
+	margin:200px 350px;
+	text-align:center;
+}
+input,select,button{
+	margin:30px;
+	}
+select,#in1,#b1{
+	box-shadow:3px 3px 3px blue;
+	color:#04047b;
+}
+#in1{
+	border-radius:10px;
+	
+}
+#b1{
+	height:30px;
+	background:#6b6bf7;
+	border-radius:20px;
+}
+#in2{
+	height:60px;
+	width:400px;
+	background:#07d8bb;
+}
+
+</style>
+</head>
+<body>
+<div id="d1">
+<input id="in1"/>
+<i><select id="s1" >
+	<option>В начале</option>
+	<option>В конце</option>
+</select></i>
+<button id="b1" onclick="f1()"><b><i>Добавить</i></b></button><br>
+<i>Cтереть в начале</i><input type="radio" id="c1" name="rad"onclick="f2()" >
+<i>Cтереть в конце</i><input type="radio" id="c2" name="rad" onclick="f2()"><br>
+<input id="in2"/>
+</div>
+<script>
+var arr=['Андрей','Иван','Илья','Павел','Петр','Сергей']
+in2.value=arr
+var a=in1.value
+var b=s1.value
+function f1(){
+var b=s1.value
+var a=in1.value
+	if(/начале/.test(b)){
+	arr.unshift(a)
+	in2.value=arr
+	}else {
+		arr.push(a)	
+		in2.value=arr
+	}
+}
+function f2(){
+var c1=document.getElementById("c1")
+var c2=document.getElementById("c2")
+	if(c1.checked==true){
+	arr.shift(a)
+	in2.value=arr
+	}else if(c2.checked==true){
+	arr.pop(a)
+	in2.value=arr
+	}
+}
+
+
+</script>
+</body>
+</html>
